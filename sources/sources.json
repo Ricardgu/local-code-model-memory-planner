@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-11-21",
+  "sources": [
+    {
+      "title": "Portable inference runtime",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "type": "upstream_repository",
+      "supports": "GGUF quantization variants, layer offload, context and batch settings.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "GGUF quantization variants, layer offload, context and batch settings.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "High-throughput server",
+      "url": "https://docs.vllm.ai/en/latest/configuration/engine_args.html",
+      "type": "official_project_documentation",
+      "supports": "GPU memory utilization, cache dtype, parallelism, batching controls.",
+      "authority": "upstream project documentation",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "GPU memory utilization, cache dtype, parallelism, batching controls.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Performance-oriented runtime",
+      "url": "https://github.com/sgl-project/sglang",
+      "type": "upstream_repository",
+      "supports": "Serving/runtime options for memory and parallel execution.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Serving/runtime options for memory and parallel execution.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "NVIDIA-focused quantized runtime",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "type": "upstream_repository",
+      "supports": "Quantization and engine-building choices for NVIDIA GPUs.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Quantization and engine-building choices for NVIDIA GPUs.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "EXL2 inference stack",
+      "url": "https://github.com/turboderp-org/exllamav2",
+      "type": "upstream_repository",
+      "supports": "EXL2 quantization and GPU-oriented inference settings.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "EXL2 quantization and GPU-oriented inference settings.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Low-bit training/inference components",
+      "url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+      "type": "upstream_repository",
+      "supports": "8-bit/4-bit linear layers and optimizers integrated by other frameworks.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "8-bit/4-bit linear layers and optimizers integrated by other frameworks.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "GPTQ quantization toolkit",
+      "url": "https://github.com/AutoGPTQ/AutoGPTQ",
+      "type": "upstream_repository",
+      "supports": "Post-training GPTQ quantization and compatible model paths.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Post-training GPTQ quantization and compatible model paths.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Accelerate model-size estimator documentation",
+      "url": "https://huggingface.co/docs/accelerate/usage_guides/model_size_estimator",
+      "type": "official_project_documentation",
+      "supports": "Documents model-size estimation from configuration assumptions.",
+      "authority": "Hugging Face Accelerate upstream project documentation",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Planning estimates described by the reviewed estimator guide.",
+      "does_not_support": "The estimator document does not establish runtime KV cache, workspace, concurrency, driver, or total process memory."
+    },
+    {
+      "title": "Memory estimator",
+      "url": "https://github.com/huggingface/accelerate",
+      "type": "upstream_repository",
+      "supports": "Estimates model loading/training-related memory from configuration assumptions.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Estimates model loading/training-related memory from configuration assumptions.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    }
+  ]
+}

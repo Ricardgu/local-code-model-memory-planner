@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "profile": 11,
+  "repository": "local-code-model-memory-planner",
+  "reviewed_on": "2026-11-21",
+  "comparison_axes": [
+    "Role",
+    "Project",
+    "Memory control",
+    "Best fit",
+    "Measure"
+  ],
+  "entries": [
+    {
+      "name": "Portable inference runtime",
+      "role_or_focus": "llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "supported_claim": "GGUF quantization variants, layer offload, context and batch settings.",
+      "best_use": "CPU/GPU/unified-memory local inference.",
+      "important_boundary": "Loaded memory, KV growth, offload split, throughput.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "High-throughput server",
+      "role_or_focus": "vLLM",
+      "url": "https://docs.vllm.ai/en/latest/configuration/engine_args.html",
+      "supported_claim": "GPU memory utilization, cache dtype, parallelism, batching controls.",
+      "best_use": "Concurrent GPU serving.",
+      "important_boundary": "Peak memory under target context and concurrency.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Performance-oriented runtime",
+      "role_or_focus": "SGLang",
+      "url": "https://github.com/sgl-project/sglang",
+      "supported_claim": "Serving/runtime options for memory and parallel execution.",
+      "best_use": "Structured generation and high-performance serving.",
+      "important_boundary": "Version-specific memory pool and concurrency behavior.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "NVIDIA-focused quantized runtime",
+      "role_or_focus": "TensorRT-LLM",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "supported_claim": "Quantization and engine-building choices for NVIDIA GPUs.",
+      "best_use": "Optimized NVIDIA deployment.",
+      "important_boundary": "Engine size, workspace, KV cache, and build/runtime versions.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "EXL2 inference stack",
+      "role_or_focus": "ExLlamaV2",
+      "url": "https://github.com/turboderp-org/exllamav2",
+      "supported_claim": "EXL2 quantization and GPU-oriented inference settings.",
+      "best_use": "Single-user or batched inference for supported architectures.",
+      "important_boundary": "Architecture support, cache mode, context peak.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Low-bit training/inference components",
+      "role_or_focus": "bitsandbytes",
+      "url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+      "supported_claim": "8-bit/4-bit linear layers and optimizers integrated by other frameworks.",
+      "best_use": "Transformers workflows using supported hardware.",
+      "important_boundary": "Kernel/hardware support and total process memory.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "GPTQ quantization toolkit",
+      "role_or_focus": "AutoGPTQ",
+      "url": "https://github.com/AutoGPTQ/AutoGPTQ",
+      "supported_claim": "Post-training GPTQ quantization and compatible model paths.",
+      "best_use": "Existing GPTQ workflows and model artifacts.",
+      "important_boundary": "Project maintenance state and runtime compatibility.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Memory estimator",
+      "role_or_focus": "Accelerate model memory estimator",
+      "url": "https://github.com/huggingface/accelerate",
+      "supported_claim": "Estimates model loading/training-related memory from configuration assumptions.",
+      "best_use": "Obtain a planning lower bound before downloading.",
+      "important_boundary": "Runtime cache, backend overhead, and real concurrency.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    }
+  ],
+  "field_provenance": {
+    "supported_claim": "source-backed at the cited URL, subject to the recorded review date/version",
+    "best_use": "author recommendation; requires local validation",
+    "important_boundary": "author analysis unless the linked source explicitly states it"
+  }
+}
