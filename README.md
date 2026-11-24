@@ -1,5 +1,10 @@
 # Local Code Model Memory Planner
 
+
+> **Decision:** Use this worksheet to budget weights, runtime state, context growth, and headroom before loading a local code model; skip it if you need a model recommendation or an exact capacity guarantee without measurement.
+>
+> **For:** local-AI operators, workstation builders, and inference service planners  ·  **Not for:** buyers comparing only disk file size or pooled-device deployments
+
 A model file fitting on disk does not mean an inference workload fits in memory. Plan four buckets separately, reserve headroom, then correct the estimate with a measured run.
 
 This is a cross-model worksheet—not a model recommendation, pooled-device guide, or replacement for a model-specific failure report.
@@ -95,6 +100,14 @@ Create a new row when model artifact, runtime, flags, hardware, context, cache d
 
 Sources: [`sources/sources.json`](sources/sources.json).
 
+## Adjacent guides
+
+- [local-llm-api-compatibility-lab](https://github.com/Bunch24/local-llm-api-compatibility-lab) — Use it after a model fits to verify the API behavior the client actually requires.
+- [local-voice-assistant-stack](https://github.com/stormjilua/local-voice-assistant-stack) — Use it when local inference is one stage in a latency- and privacy-constrained voice pipeline.
+- [agent-observability-field-guide](https://github.com/duthdoll45/agent-observability-field-guide) — Use it after deployment when runtime calls, costs, and failures need structured tracing.
+
 ## License
 
 Original planner and worksheet are available under CC BY 4.0. Linked projects retain their licenses.
+
+If this saved you a decision, star the repo — it is how the next reader finds it.
